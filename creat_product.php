@@ -1,6 +1,6 @@
 <?php
 
-//vreat_product.php
+//creat_product.php
 
 require_once "bootstrap.php";
 

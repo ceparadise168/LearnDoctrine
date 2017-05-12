@@ -53,8 +53,9 @@ protected $assignedBugs = null;
         $this->name = $name;
     } 
 
-    protected $reportedBugs;
-    protected $assignedBugs;
+  // [Bug] redeclare
+  //  protected $reportedBugs;
+  //  protected $assignedBugs;
 
     public function __construct()
     {
@@ -63,9 +64,10 @@ protected $assignedBugs = null;
     }
 
     //change the code to ensure consistency of the bi-directional reference
-
-    protected $reportedBugs = null;
-    protected $assignedBugs = null;
+    
+    // [Bug] redeclare
+   // protected $reportedBugs = null;
+   // protected $assignedBugs = null;
 
     public function addReportedBug($bug)
     {

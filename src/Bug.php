@@ -93,7 +93,8 @@ class Bug
 
     //extend the domain model to match the requirements:
 
-    protected $products;
+   //[Bug] redeclare
+   //  protected $products;
 
     public function __construct()
     {
@@ -102,8 +103,10 @@ class Bug
 
 
     // hange the code to ensure consistency of the bi-directional reference:
-    protected $engineer;
-    protected $reporter;
+  
+    // [Bug] redeclare
+    // protected $engineer;
+    //protected $reporter;
 
     public function setEngineer($engineer)
     {
@@ -129,9 +132,10 @@ class Bug
 
     // Bugs reference Products by an uni-directional ManyToMany relation in the database that points from Bugs to Products.
 
-    protected $products = null;
+    // [Bug] redeclare
+    //protected $products = null;
 
-    public function assignToProduct(@product)
+    public function assignToProduct($product)
     {
         $this->products[] = $product;
     }
