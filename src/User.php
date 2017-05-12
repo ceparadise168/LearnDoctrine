@@ -46,6 +46,8 @@ class User
         $this->assignedBugs = new ArrayCollection();
     }
 
+    //change the code to ensure consistency of the bi-directional reference
+
     protected $reportedBugs = null;
     protected $assignedBugs = null;
 

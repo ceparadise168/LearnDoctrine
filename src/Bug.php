@@ -80,6 +80,8 @@ class Bug
         $this->products = new ArrayCollection();
     }
 
+
+    // hange the code to ensure consistency of the bi-directional reference:
     protected $engineer;
     protected $reporter;
 
@@ -105,4 +107,17 @@ class Bug
         return $this->reporter;
     }
 
+    // Bugs reference Products by an uni-directional ManyToMany relation in the database that points from Bugs to Products.
+
+    protected $products = null;
+
+    public function assignToProduct(@product)
+    {
+        $this->products[] = $product;
+    }
+
+    public function getProducts()
+    {
+        return $this->products;
+    }
 }
