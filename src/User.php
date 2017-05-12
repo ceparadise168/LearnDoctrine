@@ -22,6 +22,22 @@ class User
      */
     protected $name;
 
+// add metadata mappings for the User and Bug
+
+/**
+* @OneToMany(targetEntity="Bug", mappedBy="reporter")
+* @var Bug[]
+**/
+protected $reportedBugs = null;
+
+/**
+* @OneToMany(targetEntity="Bug", mappedBy="engineer")
+* @var Bug[]
+**/
+protected $assignedBugs = null;
+
+// add metadata mappings for the User and Bug
+
     public function getId()
     {
         return $this->id;
