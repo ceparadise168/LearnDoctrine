@@ -2,6 +2,11 @@
 
 // src/Bug.php
 
+// extend the domain model to match the requirements:
+use Doctrine\Common\Collections\ArrayCollection;
+
+<?php
+
 /**
  * @Entity(repositoryClass = "BugRepository") @Table(name = "bugs")
  */
@@ -61,6 +66,15 @@ class Bug
     public function getStatus()
     {
         return $this->status;
+    }
+
+    //extend the domain model to match the requirements:
+
+    protected $products;
+
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
     }
 
 }
