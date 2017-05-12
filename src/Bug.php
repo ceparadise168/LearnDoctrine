@@ -80,4 +80,29 @@ class Bug
         $this->products = new ArrayCollection();
     }
 
+    protected $engineer;
+    protected $reporter;
+
+    public function setEngineer($engineer)
+    {
+        $engineer->assignedToBug($this);
+        $this->engineer = $engineer;
+    }
+
+    public function setReporter($reporter)
+    {
+        $reporter->addReporter($this);
+        $this->reporter = $reporter;
+    }
+
+    public function getEngineer()
+    {
+        return $this->engineer;
+    }
+
+    public function getReporter()
+    {
+        return $this->reporter;
+    }
+
 }
