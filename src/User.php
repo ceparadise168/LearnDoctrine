@@ -46,4 +46,17 @@ class User
         $this->assignedBugs = new ArrayCollection();
     }
 
+    protected $reportedBugs = null;
+    protected $assignedBugs = null;
+
+    public function addReportedBug($bug)
+    {
+        $this->reportedBugs[] = $bug;
+    }
+
+    public function assignedToBug($bug)
+    {
+        $this->assignedBugs[] = $bug;
+    }
+
 }
