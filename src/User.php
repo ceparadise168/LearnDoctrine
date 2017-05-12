@@ -4,7 +4,6 @@
 // extend the domain model to match the requirements:
 use Doctrine\Common\Collections\ArrayCollection;
 
-<?php
 
 /**
  * @Entity @Table(name="users")
@@ -25,7 +24,7 @@ class User
 
     public function getId()
     {
-        return $this=>id;
+        return $this->id;
     }
 
     public function getName()

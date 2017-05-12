@@ -3,9 +3,10 @@
 // src/Product.php
 
 // define class & table name
+
 /**
  * @Entity @Table(name="products")
- **/
+ */
 
 
 class Product
