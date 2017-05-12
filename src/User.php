@@ -1,6 +1,10 @@
 <?php
 
 // src/User.php
+// extend the domain model to match the requirements:
+use Doctrine\Common\Collections\ArrayCollection;
+
+<?php
 
 /**
  * @Entity @Table(name="users")
@@ -33,4 +37,14 @@ class User
     {
         $this->name = $name;
     } 
+
+    protected $reportedBugs;
+    protected $assignedBugs;
+
+    public function __construct()
+    {
+        $this->reportedBuds = new ArrayCollection();
+        $this->assignedBugs = new ArrayCollection();
+    }
+
 }
