@@ -116,7 +116,7 @@ class Bug
 
     public function setReporter($reporter)
     {
-        $reporter->addReporter($this);
+        $reporter->addReportedBug($this);
         $this->reporter = $reporter;
     }
 
