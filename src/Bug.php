@@ -36,6 +36,26 @@ class Bug
      */
     protected $status;
 
+    // add metadata mappings for the Bug
+
+    /**
+     * @ManyToOne(targetEntity="User", inversedBy="assignedBugs")
+     **/
+    protected $engineer;
+
+    /**
+     * @ManyToOne(targetEntity="User", inversedBy="reportedBugs")
+     **/
+    protected $reporter;
+
+    /**
+     * @ManyToMany(targetEntity="Product")
+     **/
+    protected $products;
+
+    // add metadata mappings for the Bug
+
+
     public function getId()
     {
         return $this->id;
